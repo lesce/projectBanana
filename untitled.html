@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript">
+	function drawww(){
+		var cnvs = document.getElementById("hexagon");
+		var context = cnvs.getContext("2d");
+		//context.strokeRect(50,25,150,100);	
+		var pic = new Image();
+		pic.src = "hexagonrgb.jpg";
+		context.drawImage(pic,0,0,100,100);
+		context.drawImage(pic,50,50,100,100);
+	}
+	function reset(){
+		var cnvs = document.getElementById("hexagon");
+		cnvs.width = cnvs.width;
+	}
+	</script>
+</head>
+<body>
+	<canvas id="hexagon" onclick="drawww();"></canvas>
+	<div style="width:100px;height:100px;background-color:black;position:absolute;" onclick="reset();" ></div>
+</body>
+</html>
