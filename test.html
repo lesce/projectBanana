@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+  
+  <head>
+    <script type="text/javascript">
+      // This function is called when the lake is clicked.
+
+
+      function lakeColor() {
+
+        // Display a fact.
+        alert("Lake Michigan is one of the five Great Lakes of America.");
+
+        // Get the SVG polygon element.
+        var myLake = document.getElementById("lake");
+
+        // Color it by changing the fill attribute.
+        myLake.setAttribute("fill", "blue");
+      }
+    </script>
+  </head>
+  
+  <body>
+    <h1>
+      Lake Michigan
+    </h1>
+    <!-- Create the main SVG element. -->
+    <svg x="0" y="0" width="400" height="400">
+      <!-- Add the polygon element. -->
+      <polygon fill="white" stroke="blue" id="lake" onclick="lakeColor()" points="263.3,11.3 252,28 217.3,28 184,74 154,123.3 142,170 
+      127.3,214 112.7,252 124,284.7 120,318.7 124,356 154,389.3 196.5,356.7 218.7,318 206,240 212.7,182 230.7,121.3 253.3,103.3 
+      288,74 288,23.3 " />
+    </svg>
+    <p>
+      Click on the lake to learn a fact about Lake Michigan.
+    </p>
+  </body>
+
+</html>
