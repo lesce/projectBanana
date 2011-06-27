@@ -8,7 +8,7 @@ var list = new Array(1,0,2,1,4,3,2,1,3,0,0,4,3,2,4,4,3,2,5);
 var resHex = new Array(19);
 var indexResHex = 0;
 
-function drawww(){
+function drawMap(){
 	var cnvs = document.getElementById("hexagon");
 	var context = cnvs.getContext("2d");
 	var pic = new Image();
@@ -45,3 +45,11 @@ function getPic(){
 	indexResHex++;
 	return testPic;
 }
+
+//event listener for mouse move --- helps get the coords for the nodes
+
+$("*").mousemove(function(v){
+	myX = v.pageX - 300;
+	myY = v.pageY - 30;
+	$(".coord").html("<h1>"+myX+" "+myY+"</h1>");
+	});
